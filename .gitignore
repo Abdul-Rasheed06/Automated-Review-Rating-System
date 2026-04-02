@@ -1,0 +1,7 @@
+Backend/api/models/ 
+Dataset/ 
+*.csv 
+*.safetensors 
+__pycache__/ 
+node_modules/ 
+.env 
