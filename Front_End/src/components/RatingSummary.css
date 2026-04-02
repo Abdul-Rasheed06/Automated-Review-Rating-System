@@ -1,0 +1,108 @@
+/* ---- Modern Gradient Header ---- */
+.summary-top {
+  background: linear-gradient(90deg, #6b4bff, #9d4bff);
+  padding: 35px 0;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ---- MAIN SUMMARY BOX ---- */
+.summary-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+/* ---- LEFT SIDE ---- */
+.summary-left {
+  width: 28%;
+  text-align: center;
+}
+
+.summary-score {
+  font-size: 55px;
+  font-weight: 700;
+  color: #4f3ff0;
+}
+
+.summary-outof {
+  font-size: 16px;
+  color: #777;
+  margin-top: -5px;
+}
+
+.summary-stars {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.star {
+  color: #ddd;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.summary-count {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Divider */
+.summary-divider {
+  width: 2px;
+  height: 120px;
+  background: #eee;
+}
+
+/* ---- RIGHT SIDE ---- */
+.summary-right {
+  width: 60%;
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.row-label {
+  width: 45px;
+  font-weight: 600;
+}
+
+.row-bar {
+  flex: 1;
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.row-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: #7a57ff;
+  transition: width 0.4s ease;
+}
+
+.row-number {
+  width: 30px;
+  text-align: right;
+  color: #444;
+}

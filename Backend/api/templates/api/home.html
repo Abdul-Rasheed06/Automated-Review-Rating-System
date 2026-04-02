@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automated Review Rating System</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .review-card { border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .stars { color: gold; font-size: 18px; }
+        #resultArea { margin-top: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1>Automated Review Rating System</h1>
+
+<textarea id="reviewInput" rows="4" cols="50" placeholder="Enter your review here..."></textarea><br><br>
+<button onclick="predictRating()">Predict Rating</button>
+
+<div id="resultArea"></div>
+
+<h2>All Reviews</h2>
+<div id="reviewsContainer">
+    {% for r in reviews %}
+        <div class="review-card">
+            <p>{{ r.review }}</p>
+            <p class="stars">
+                {% for i in "12345" %}
+                    {% if forloop.counter <= r.rating %}
+                        ★
+                    {% else %}
+                        ☆
+                    {% endif %}
+                {% endfor %}
+                ({{ r.rating }}/5)
+            </p>
+        </div>
+    {% endfor %}
+</div>
+
+<script>
+function predictRating() {
+    let review = document.getElementById("reviewInput").value;
+    if (!review) return alert("Please enter a review");
+
+    fetch(`/predict_review/?review=${encodeURIComponent(review)}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.error) {
+                document.getElementById("resultArea").innerText = data.error;
+            } else {
+                let filledStars = '★'.repeat(data.predicted_rating);
+                let emptyStars = '☆'.repeat(5 - data.predicted_rating);
+
+                document.getElementById("resultArea").innerHTML =
+                    `Predicted Rating: <span class="stars">${filledStars}${emptyStars} (${data.predicted_rating}/5)</span>`;
+
+                // Dynamically add new review to the top of the list
+                let container = document.getElementById("reviewsContainer");
+                let div = document.createElement("div");
+                div.className = "review-card";
+                div.innerHTML = `<p>${data.review}</p>
+                                 <p class="stars">${filledStars}${emptyStars} (${data.predicted_rating}/5)</p>`;
+                container.prepend(div);
+
+                // Clear input
+                document.getElementById("reviewInput").value = "";
+            }
+        })
+        .catch(err => console.log(err));
+}
+</script>
+
+</body>
+</html>

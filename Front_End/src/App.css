@@ -1,0 +1,286 @@
+/* ------------------------------ */
+/* GLOBAL PAGE THEME              */
+/* ------------------------------ */
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f6f7ff;
+}
+
+/* Gradient Header */
+.header-section {
+  width: 100%;
+  padding: 50px 0 90px 0;
+  background: linear-gradient(135deg, #6a5af9, #8a4efc);
+  text-align: center;
+  color: white;
+  border-radius: 0 0 35px 35px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ------------------------------ */
+/* SUMMARY BOX                    */
+/* ------------------------------ */
+
+.summary-container {
+  width: 82%;
+  margin: -60px auto 30px auto;
+  background: white;
+  border-radius: 22px;
+
+  border: 2px solid #000;   /* SHARP BLACK BORDER */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); /* same shadow */
+
+  padding: 40px 45px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* LEFT SIDE */
+.summary-left {
+  width: 25%;
+  text-align: center;
+}
+
+.summary-score {
+  font-size: 65px;
+  font-weight: bold;
+  color: #6c5ffc;
+}
+
+.summary-stars {
+  font-size: 28px;
+  color: #ffd700;
+  margin-top: 5px;
+}
+
+.summary-total {
+  font-size: 15px;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* CENTER BARS */
+.summary-bars {
+  width: 45%;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.rating-row span {
+  width: 25px;
+}
+
+/* BAR */
+.rating-bar {
+  flex: 1;
+  height: 8px;
+  background: #ececff;
+  border-radius: 5px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.rating-bar-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #6a5af9, #8a4efc);
+  border-radius: 5px;
+}
+
+/* RIGHT SIDE */
+.summary-right {
+  width: 30%;
+  text-align: right;
+}
+
+.experience-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.experience-desc {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.write-btn {
+  background: linear-gradient(135deg, #6a5af9, #8a4efc);
+  padding: 12px 22px;
+  color: white;
+  border: none;
+  border-radius: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.write-btn:hover {
+  transform: scale(1.07);
+}
+
+/* ------------------------------ */
+/* INPUT + PREDICTION             */
+/* ------------------------------ */
+
+.input-section {
+  width: 82%;
+  margin: 30px auto;
+}
+
+.review-box {
+  width: 100%;
+  height: 140px;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  font-size: 16px;
+  background: white;
+}
+
+.predict-btn {
+  margin-top: 12px;
+  padding: 12px 22px;
+  border-radius: 25px;
+  background: #6a5af9;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.predict-btn:hover {
+  background: #5a4ae0;
+}
+
+.prediction-box {
+  margin-top: 15px;
+  padding: 15px;
+  background: #efe9ff;
+  border-radius: 12px;
+  border-left: 5px solid #6a5af9;
+  font-size: 18px;
+}
+
+/* ------------------------------ */
+/* REVIEW LIST                    */
+/* ------------------------------ */
+
+.review-card {
+  background: white;
+  width: 82%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 14px;
+
+  border: 2px solid #000;   /* SAME SHARP BLACK BORDER */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); /* same shadow */
+}
+
+.review-stars {
+  font-size: 20px;
+  color: #ffd700;
+}
+
+.review-text {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #333;
+}
+/* --- Modern Black Border + Soft Shadow --- */
+.card-box {
+  border: 1.3px solid rgba(0, 0, 0, 0.35); 
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  border-radius: 14px;
+  padding: 18px 22px;
+  background: white;
+  margin-bottom: 22px;
+}
+
+/* --- Textbox Shadow Style --- */
+.review-textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 2px solid #000;   /* SHARP BLACK BORDER */
+  border-radius: 12px;
+  padding: 12px;
+  outline: none;
+  resize: vertical;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); /* shadow */
+  transition: 0.2s;
+}
+
+.review-textarea:focus {
+  border: 2px solid #000;  /* KEEP BLACK EVEN ON FOCUS */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Section Heading --- */
+.section-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.review-box {
+  width: 100%;
+  min-height: 120px;
+  border: 1.3px solid black;   /* <-- permanent black border */
+  border-radius: 12px;
+  padding: 12px;
+  outline: none;
+  resize: vertical;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* APPLY SAME BLACK BORDER + SHADOW TO SUMMARY BOX */
+.summary-container {
+  border: 1.3px solid rgba(0, 0, 0, 0.35);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  border-radius: 14px;
+}
+
+/* APPLY SAME BORDER + SHADOW TO EACH REVIEW CARD */
+.review-card {
+  border: 1.3px solid rgba(0, 0, 0, 0.35);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  border-radius: 14px;
+}
+
+/* --- Predicted Rating Box Styling --- */
+.predict-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+}
+
+.predict-number {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 5px 0;
+  color: #6a5af9;
+}
+
+.predict-stars {
+  font-size: 26px;
+  color: #ffd700;
+  margin-top: 5px;
+}
+
